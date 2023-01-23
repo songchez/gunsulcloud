@@ -1,9 +1,10 @@
 import { AppProps } from 'next/app';
 
 import '../styles/global.css';
+import { Base } from '../templates/Base';
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
-);
-
-export default MyApp;
+export default function MyApp({ Component, pageProps }: AppProps) {
+  <Base>
+    <Component {...pageProps} />
+  </Base>;
+}
