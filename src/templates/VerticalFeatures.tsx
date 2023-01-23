@@ -4,7 +4,7 @@ import { Section } from '../layout/Section';
 const VerticalFeatures = () => (
   <Section
     title="새한건설정보"
-    description="건설업 등록할 때, 내가 할 수 있을까? 알고 싶을 때, 고민을 해결해 드립니다."
+    description="전문가에게 맡기는 건설업 등록, 여러분의 고민을 해결해 드립니다."
   >
     <VerticalFeatureRow
       title="Your title here"
