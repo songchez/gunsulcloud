@@ -36,5 +36,12 @@
     "incremental": true
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/logintsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/logintsx",
+    "src/utils/materialUi.js",
+    "src/utils/materialUi.js"
+  ]
 }
