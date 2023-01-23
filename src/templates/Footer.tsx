@@ -72,17 +72,12 @@ const Footer = () => (
       >
         <li>
           <Link href="/">
-            <a>Home</a>
+            <a>홈</a>
           </Link>
         </li>
         <li>
-          <Link href="/">
-            <a>About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a>Docs</a>
+          <Link href="/login">
+            <a>로그인</a>
           </Link>
         </li>
       </CenteredFooter>
