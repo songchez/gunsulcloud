@@ -1,6 +1,7 @@
 export const AppConfig = {
-  site_name: '온쉼',
-  title: '넥스트+테일윈드 테스트',
-  description: '설명입니다다다ㅏ다다다다ㅏ다ㅏ',
+  site_name: '새한건설정보',
+  title: '새한건설정보',
+  description:
+    '건설업면허등록, 기업진단, 양수양도, 기업회생 | 고객님이 믿고 맡길 수 있는 업체, 새한건설정보',
   locale: 'kr',
 };

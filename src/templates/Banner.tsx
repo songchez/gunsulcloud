@@ -7,12 +7,12 @@ import { Section } from '../layout/Section';
 const Banner = () => (
   <Section>
     <CTABanner
-      title="안녕하세요"
-      subtitle="시작하세요 당신의 새로운 삶"
+      title="잠깐!"
+      subtitle="전문가에게 더 상세한 진단을 받아보세요"
       button={
         <Link href="https://byline.network/wp-content/uploads/2018/05/cat.png">
           <a>
-            <Button>시작하기</Button>
+            <Button>제안하기</Button>
           </a>
         </Link>
       }
