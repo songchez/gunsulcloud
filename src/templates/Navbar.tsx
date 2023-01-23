@@ -15,7 +15,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/mappin">
-            <a>지도보기</a>
+            <a>로그인</a>
           </Link>
         </li>
       </NavbarTwoColumns>
