@@ -13,12 +13,12 @@ const Hero = () => (
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
           <Link href="/">
-            <a>드가자</a>
+            <a>홈</a>
           </Link>
         </li>
         <li>
-          <Link href="/">
-            <a>나가자</a>
+          <Link href="/mappin">
+            <a>지도보기</a>
           </Link>
         </li>
       </NavbarTwoColumns>
@@ -28,11 +28,11 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'랜딩페이지 샘플\n'}
-            <span className="text-primary-500">넥스트+테일윈드</span>
+            {'신규건설업등록, 이제 고민하지마세요\n'}
+            <span className="text-primary-500">새한건설정보에게 맡기세요</span>
           </>
         }
-        description="설명맨"
+        description={`신규건설업 등록, 아직도 고민 중이신가요? \n 여러분도 할 수 있습니다.`}
         button={
           <Link href="/">
             <a>
