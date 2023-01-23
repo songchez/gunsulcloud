@@ -1,12 +1,16 @@
+import { ThemeProvider } from '@mui/material/styles';
 import { AppProps } from 'next/app';
 
-import '../styles/global.css';
 import { Base } from '../templates/Base';
+import { theme } from '../utils/materialUi';
+import '../styles/global.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Base>
-      <Component {...pageProps} />
-    </Base>
+    <ThemeProvider theme={theme}>
+      <Base>
+        <Component {...pageProps} />
+      </Base>
+    </ThemeProvider>
   );
 }
