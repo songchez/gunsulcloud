@@ -1,13 +1,17 @@
-import * as React from 'react';
+import React from 'react';
 
-import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { Theme, useTheme } from '@mui/material/styles';
+import {
+  SelectChangeEvent,
+  FormControl,
+  InputLabel,
+  Select,
+  OutlinedInput,
+  Box,
+  Chip,
+  MenuItem,
+  Theme,
+  useTheme,
+} from '@mui/material';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -20,26 +24,32 @@ const MenuProps = {
   },
 };
 
-const names = ['토목', '건축', '토목건축', '산업설비', '조경'];
-
-function getStyles(name: string, personName: readonly string[], theme: Theme) {
+function getStyles(
+  name: string,
+  businessName: readonly string[],
+  theme: Theme
+) {
   return {
     fontWeight:
-      personName.indexOf(name) === -1
+      businessName.indexOf(name) === -1
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
   };
 }
+interface Names {
+  kind: string;
+  names: string[];
+}
 
-export default function MultipleSelectChip() {
+export default function MultipleSelectChip(props: Names) {
   const theme = useTheme();
-  const [personName, setPersonName] = React.useState<string[]>([]);
+  const [businessName, setbusinessName] = React.useState<string[]>([]);
 
-  const handleChange = (event: SelectChangeEvent<typeof personName>) => {
+  const handleChange = (event: SelectChangeEvent<typeof businessName>) => {
     const {
       target: { value },
     } = event;
-    setPersonName(
+    setbusinessName(
       // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value
     );
@@ -47,13 +57,13 @@ export default function MultipleSelectChip() {
 
   return (
     <div className="flex justify-center">
-      <FormControl sx={{ m: 1, width: 600 }}>
-        <InputLabel id="whatTheyhave">보유면허(종합건설)</InputLabel>
+      <FormControl sx={{ m: 1, width: 250 }}>
+        <InputLabel id="whatTheyhave">{props.kind}</InputLabel>
         <Select
           labelId="whatTheyhave"
           id="whatTheyhave"
           multiple
-          value={personName}
+          value={businessName}
           onChange={handleChange}
           input={<OutlinedInput id="chip" label="보유면허" />}
           renderValue={(selected) => (
@@ -65,11 +75,11 @@ export default function MultipleSelectChip() {
           )}
           MenuProps={MenuProps}
         >
-          {names.map((name) => (
+          {props.names.map((name) => (
             <MenuItem
               key={name}
               value={name}
-              style={getStyles(name, personName, theme)}
+              style={getStyles(name, businessName, theme)}
             >
               {name}
             </MenuItem>
