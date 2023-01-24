@@ -1,6 +1,7 @@
 import { Button, TextField } from '@mui/material';
 
 import MultipleSelectChip from '../components/multipleSelectChip';
+import SelectTextFields from '../components/selecttext';
 
 export default function Diagnosis() {
   return (
@@ -11,7 +12,7 @@ export default function Diagnosis() {
         </div>
         <TextField id="sangho" label="회사명" variant="outlined"></TextField>
 
-        <h1>보유하고 있는 면허</h1>
+        <h1 className="m-1">보유하고 있는 면허</h1>
         <div className="flex justify-left">
           <MultipleSelectChip
             kind="종합건설업"
@@ -37,8 +38,14 @@ export default function Diagnosis() {
             ]}
           ></MultipleSelectChip>
         </div>
-
-        <TextField id="jabongum" label="자본금" variant="outlined"></TextField>
+        <h1 className="m-1">등록하고 싶은 면허</h1>
+        <SelectTextFields />
+        <TextField
+          id="jabongum"
+          type="number"
+          label="자본금"
+          variant="outlined"
+        ></TextField>
         <TextField id="dugazza" label="상태_1" variant="outlined"></TextField>
         <TextField id="dugazza" label="기술인력" variant="outlined"></TextField>
         <TextField id="dugazza" label="상태_2" variant="outlined"></TextField>
