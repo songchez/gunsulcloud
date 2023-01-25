@@ -14,9 +14,28 @@ export default function Diagnosis() {
     <div className="flex justify-center p-4 bg-primary-100 m-4 rounded-lg">
       <div className="flex flex-col justify-center gap-4 w-screen max-w-xl">
         <div className="text-2xl font-semibold">
-          <div className="text-primary-500">기업진단</div>
+          <div className="text-primary-500 text-left m-3 text-3xl font-bold ">
+            알고리즘 기업진단
+          </div>
+          <div className="bg-primary-500 w-full h-px mx-2"></div>
         </div>
-        <TextField id="sangho" label="회사명" variant="outlined"></TextField>
+        <div className="mx-3 flex justify-left gap-4">
+          <TextField id="sangho" label="회사명" variant="outlined"></TextField>
+          <div>
+            <FormControl sx={{ width: '13rem' }} variant="outlined">
+              <OutlinedInput
+                placeholder="보유자본금"
+                id="jabongum"
+                endAdornment={
+                  <InputAdornment position="end">억원</InputAdornment>
+                }
+              />
+            </FormControl>
+          </div>
+        </div>
+        <div className="mx-3 flex justify-left gap-4">
+          <TextField id="dugazza" label="기능사" variant="outlined"></TextField>
+        </div>
 
         <h1 className="mx-2">보유하고 있는 면허</h1>
         <div className="flex justify-left">
@@ -49,25 +68,9 @@ export default function Diagnosis() {
             <h2 className="mx-2">등록하고 싶은 면허</h2>
             <SelectTextFields />
           </div>
-          <div>
-            <h2 className="">자본금</h2>
-            <FormControl sx={{ m: 1, width: '15rem' }} variant="outlined">
-              <OutlinedInput
-                id="outlined-adornment-weight"
-                endAdornment={
-                  <InputAdornment position="end">억</InputAdornment>
-                }
-                aria-describedby="outlined-weight-helper-text"
-                inputProps={{
-                  'aria-label': 'weight',
-                }}
-              />
-            </FormControl>
-          </div>
         </div>
 
         <TextField id="dugazza" label="상태_1" variant="outlined"></TextField>
-        <TextField id="dugazza" label="기술인력" variant="outlined"></TextField>
         <TextField id="dugazza" label="상태_2" variant="outlined"></TextField>
         <div className="flex justify-center m-5">
           <Button variant="outlined" size="large">

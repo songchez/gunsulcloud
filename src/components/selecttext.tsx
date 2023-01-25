@@ -1,10 +1,4 @@
-import {
-  FormControl,
-  InputLabel,
-  ListSubheader,
-  MenuItem,
-  Select,
-} from '@mui/material';
+import { FormControl, ListSubheader, MenuItem, Select } from '@mui/material';
 
 interface Businesstype {
   종합건설업: string[];
@@ -35,8 +29,7 @@ export default function GroupedSelect() {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel htmlFor="grouped-select">건설업</InputLabel>
-        <Select id="grouped-select" label="건설업">
+        <Select id="grouped-select" defaultValue={`건축`}>
           <ListSubheader>종합건설업</ListSubheader>
           {businesstype.종합건설업.map((ops) => (
             <MenuItem key={ops} value={ops}>
