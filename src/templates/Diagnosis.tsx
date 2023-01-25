@@ -38,7 +38,7 @@ export default function Diagnosis() {
           <BtngropCustom />
         </div>
 
-        <h1 className="mx-2">보유하고 있는 면허</h1>
+        <h1 className="mx-2 mt-2">보유하고 있는 면허</h1>
         <div className="flex justify-left">
           <MultipleSelectChip
             kind="종합건설업"
@@ -66,7 +66,7 @@ export default function Diagnosis() {
         </div>
         <div className="flex justify-between">
           <div>
-            <h2 className="mx-2">등록하고 싶은 면허</h2>
+            <h2 className="mx-2 mb-2">등록하고 싶은 면허</h2>
             <SelectTextFields />
           </div>
         </div>
