@@ -19,7 +19,6 @@ const VerticalFeatures = () => (
       imageAlt="두번째 feature alt text"
       reverse={true}
     />
-    <h3> </h3>
   </Section>
 );
 
