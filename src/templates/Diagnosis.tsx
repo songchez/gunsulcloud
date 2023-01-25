@@ -1,4 +1,10 @@
-import { Button, TextField } from '@mui/material';
+import {
+  Button,
+  FormControl,
+  InputAdornment,
+  OutlinedInput,
+  TextField,
+} from '@mui/material';
 
 import MultipleSelectChip from '../components/multipleSelectChip';
 import SelectTextFields from '../components/selecttext';
@@ -12,7 +18,7 @@ export default function Diagnosis() {
         </div>
         <TextField id="sangho" label="회사명" variant="outlined"></TextField>
 
-        <h1 className="m-1">보유하고 있는 면허</h1>
+        <h1 className="mx-2">보유하고 있는 면허</h1>
         <div className="flex justify-left">
           <MultipleSelectChip
             kind="종합건설업"
@@ -38,14 +44,28 @@ export default function Diagnosis() {
             ]}
           ></MultipleSelectChip>
         </div>
-        <h1 className="m-1">등록하고 싶은 면허</h1>
-        <SelectTextFields />
-        <TextField
-          id="jabongum"
-          type="number"
-          label="자본금"
-          variant="outlined"
-        ></TextField>
+        <div className="flex justify-between">
+          <div>
+            <h2 className="mx-2">등록하고 싶은 면허</h2>
+            <SelectTextFields />
+          </div>
+          <div>
+            <h2 className="">자본금</h2>
+            <FormControl sx={{ m: 1, width: '15rem' }} variant="outlined">
+              <OutlinedInput
+                id="outlined-adornment-weight"
+                endAdornment={
+                  <InputAdornment position="end">억</InputAdornment>
+                }
+                aria-describedby="outlined-weight-helper-text"
+                inputProps={{
+                  'aria-label': 'weight',
+                }}
+              />
+            </FormControl>
+          </div>
+        </div>
+
         <TextField id="dugazza" label="상태_1" variant="outlined"></TextField>
         <TextField id="dugazza" label="기술인력" variant="outlined"></TextField>
         <TextField id="dugazza" label="상태_2" variant="outlined"></TextField>
