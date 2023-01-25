@@ -1,42 +1,16 @@
-import { useState } from 'react';
-
 import {
   Button,
-  ButtonGroup,
   FormControl,
   InputAdornment,
   OutlinedInput,
   TextField,
 } from '@mui/material';
 
+import { BtngropCustom } from '../components/buttongrop';
 import MultipleSelectChip from '../components/multipleSelectChip';
 import SelectTextFields from '../components/selecttext';
 
 export default function Diagnosis() {
-  const [Wnumber1, setWnumber1] = useState(0);
-  const [Wnumber2, setWnumber2] = useState(0);
-  const [Wnumber3, setWnumber3] = useState(0);
-  const [Wnumber4, setWnumber4] = useState(0);
-
-  const Addnumber = (index: number) => {
-    switch (index) {
-      case 0:
-        setWnumber1(Wnumber1 + 1);
-        break;
-      case 1:
-        setWnumber2(Wnumber2 + 1);
-        break;
-      case 2:
-        setWnumber3(Wnumber3 + 1);
-        break;
-      case 3:
-        setWnumber4(Wnumber4 + 1);
-        break;
-      default:
-        break;
-    }
-  };
-
   return (
     <div className="flex justify-center p-4 bg-primary-100 m-4 rounded-lg">
       <div className="flex flex-col justify-center gap-4 w-screen max-w-xl">
@@ -61,53 +35,7 @@ export default function Diagnosis() {
           </div>
         </div>
         <div className="mx-3 flex flex-col justify-left gap-4">
-          <div className="flex justify-left gap-9">
-            <div className="border-2 border-primary-500 w-7 h-7 flex justify-center text-primary-500 font-bold">
-              {Wnumber1}
-            </div>
-            <div className="border-2 border-primary-500 w-7 h-7 flex justify-center text-primary-500 font-bold">
-              {Wnumber2}
-            </div>
-            <div className="border-2 border-primary-500 w-7 h-7 flex justify-center text-primary-500 font-bold">
-              {Wnumber3}
-            </div>
-            <div className="border-2 border-primary-500 w-7 h-7 flex justify-center text-primary-500 font-bold">
-              {Wnumber4}
-            </div>
-            <Button variant="outlined" onClick={() => {}}>
-              초기화
-            </Button>
-          </div>
-          <ButtonGroup variant="outlined" aria-label="outlined button group">
-            <Button
-              onClick={() => {
-                Addnumber(0);
-              }}
-            >
-              기능사
-            </Button>
-            <Button
-              onClick={() => {
-                Addnumber(1);
-              }}
-            >
-              초급
-            </Button>
-            <Button
-              onClick={() => {
-                Addnumber(2);
-              }}
-            >
-              중급
-            </Button>
-            <Button
-              onClick={() => {
-                Addnumber(3);
-              }}
-            >
-              고급
-            </Button>
-          </ButtonGroup>
+          <BtngropCustom />
         </div>
 
         <h1 className="mx-2">보유하고 있는 면허</h1>
