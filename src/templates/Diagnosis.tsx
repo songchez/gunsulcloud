@@ -9,22 +9,22 @@ import GroupedSelect2 from '../components/selecttext_2';
 
 export default function Diagnosis() {
   return (
-    <div className="flex justify-center p-4 bg-primary-100 m-4 rounded-lg">
-      <div className="flex flex-col justify-center gap-10 w-screen max-w-xl">
+    <div className="flex justify-center p-4 bg-primary-100 sm:m-4 rounded-lg">
+      <div className="flex flex-col justify-center gap-8 w-screen max-w-xl">
         <div className="text-2xl font-semibold">
-          <div className="text-primary-500 text-left m-3 text-3xl font-bold ">
+          <div className="text-primary-500 text-left m-3 text-3xl font-bold">
             AI건설업 기업진단
           </div>
           <div className="bg-primary-500 w-full h-px mx-2"></div>
         </div>
-        <div>
+        <div className="mx-5">
           다음 사항들을 빠짐없이 입력해주세요. 정확히 입력하실수록 더 확실한
           분석이 가능해집니다.
         </div>
-        <div className="mx-3 w-full">
+        <div className="flex flex-col justify-center mx-3">
           <TextField id="bname" label="회사명" variant="outlined"></TextField>
         </div>
-        <div className="flex justify-left">
+        <div className="flex justify-around">
           <GroupedSelect2
             subject="자본금"
             devalue="1억5천"
@@ -38,14 +38,15 @@ export default function Diagnosis() {
           />
         </div>
 
-        <div className="mx-3 flex flex-col justify-left gap-4">
+        <div className="mx-3 flex flex-col justify-left gap-4 text-lg">
           <Fragment>기술인력 (해당 위치를 누르면 숫자가 증가합니다.)</Fragment>
           <BtngropCustom />
         </div>
 
-        <div className="mx-2 mt-2">
+        <div className="mx-2 mt-2 text-lg">
           보유하고 있는 면허
-          <div className="flex justify-left ">
+          {/* 반응형 움직임으로 밑으로 들어감 */}
+          <div className="mm:flex flex-col">
             <MultipleSelectChip
               kind="종합건설업"
               names={['토목', '건축', '토목건축', '산업설비', '조경']}
@@ -72,14 +73,12 @@ export default function Diagnosis() {
           </div>
         </div>
 
-        <div className="flex justify-center border-2 border-primary-400 shadow-lg">
-          <div>
-            <h2 className="mx-2 mb-2 text-3xl text-center text-primary-400">
-              등록하고 싶은 면허
-            </h2>
-            <div className="flex justify-center">
-              <SelectTextFields />
-            </div>
+        <div className="border-2 border-primary-400 shadow-lg m-2">
+          <h2 className="mx-2 mb-2 text-lg mm:text-2xl text-primary-400">
+            등록하고 싶은 면허
+          </h2>
+          <div className="flex justify-center">
+            <SelectTextFields />
           </div>
         </div>
 

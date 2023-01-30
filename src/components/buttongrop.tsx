@@ -18,8 +18,10 @@ const BtnCustom = (props: Props) => {
       size="large"
     >
       <div className="flex flex-col items-center">
-        <p className="text-center font-bold">{props.subject}</p>
-        <div className="mr-1 border-2 border-primary-500 w-7 h-7 text-primary-500 font-bold">
+        <p className="p-1 whitespace-nowrap text-center font-bold text-xs sm:text-base">
+          {props.subject}
+        </p>
+        <div className="border-2 border-primary-500 w-7 h-7 text-primary-500 font-bold">
           {props.wnumber}
         </div>
       </div>
@@ -89,7 +91,7 @@ export const BtngropCustom = () => {
           ResetNumber();
         }}
       >
-        초기화
+        <span className="whitespace-nowrap">초기화</span>
       </Button>
     </ButtonGroup>
   );

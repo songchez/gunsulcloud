@@ -13,7 +13,7 @@ export default function GroupedSelect2({
 }: Menuitem) {
   return (
     <div>
-      <div className="mx-2">{subject}</div>
+      <div className="mx-2 text-lg">{subject}</div>
       <FormControl sx={{ mx: 1, minWidth: 120 }}>
         <Select id="grouped-select" defaultValue={devalue}>
           {menuitem.map((ops, idx) => (
