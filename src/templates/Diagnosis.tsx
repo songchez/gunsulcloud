@@ -13,7 +13,7 @@ export default function Diagnosis() {
       <div className="flex flex-col justify-center gap-10 w-screen max-w-xl">
         <div className="text-2xl font-semibold">
           <div className="text-primary-500 text-left m-3 text-3xl font-bold ">
-            알고리즘 기업진단
+            AI 기업진단
           </div>
           <div className="bg-primary-500 w-full h-px mx-2"></div>
         </div>
@@ -72,10 +72,14 @@ export default function Diagnosis() {
           </div>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-center border-2 border-primary-400 shadow-lg">
           <div>
-            <h2 className="mx-2 mb-2">등록하고 싶은 면허</h2>
-            <SelectTextFields />
+            <h2 className="mx-2 mb-2 text-3xl text-center text-primary-400">
+              등록하고 싶은 면허
+            </h2>
+            <div className="flex justify-center">
+              <SelectTextFields />
+            </div>
           </div>
         </div>
 
