@@ -1,6 +1,12 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screen: {
+      mm: '650px',
+      sm: '500px',
+      ss: '400px',
+      sx: '350px',
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
