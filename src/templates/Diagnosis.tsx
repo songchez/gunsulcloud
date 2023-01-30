@@ -13,7 +13,7 @@ export default function Diagnosis() {
       <div className="flex flex-col justify-center gap-10 w-screen max-w-xl">
         <div className="text-2xl font-semibold">
           <div className="text-primary-500 text-left m-3 text-3xl font-bold ">
-            AI 기업진단
+            AI건설업 기업진단
           </div>
           <div className="bg-primary-500 w-full h-px mx-2"></div>
         </div>
@@ -45,7 +45,7 @@ export default function Diagnosis() {
 
         <div className="mx-2 mt-2">
           보유하고 있는 면허
-          <div className="flex justify-left">
+          <div className="flex justify-left ">
             <MultipleSelectChip
               kind="종합건설업"
               names={['토목', '건축', '토목건축', '산업설비', '조경']}
