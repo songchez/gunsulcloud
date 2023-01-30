@@ -56,8 +56,8 @@ export default function MultipleSelectChip(props: Names) {
   };
 
   return (
-    <div className="flex justify-center">
-      <FormControl sx={{ m: 1, width: 250 }}>
+    <div className="flex flex-col my-3 ">
+      <FormControl>
         <InputLabel id="whatTheyhave">{props.kind}</InputLabel>
         <Select
           labelId="whatTheyhave"
