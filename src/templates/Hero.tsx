@@ -12,7 +12,7 @@ const Hero = () => (
         title={
           <>
             {'신규건설업등록, 이제 고민하지마세요\n'}
-            <span className="text-primary-500">새한건설정보에게 맡기세요</span>
+            <span className="text-primary-500">건설왕에게 맡기세요</span>
           </>
         }
         description={`신규건설업 등록, 아직도 고민 중이신가요? \n 여러분도 할 수 있습니다.`}
