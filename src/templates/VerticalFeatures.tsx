@@ -3,7 +3,7 @@ import { Section } from '../layout/Section';
 
 const VerticalFeatures = () => (
   <Section
-    title="새한건설정보"
+    title="건설왕"
     description="전문가에게 맡기는 건설업 등록, 여러분의 고민을 해결해 드립니다."
   >
     <VerticalFeatureRow

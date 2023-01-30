@@ -71,8 +71,7 @@ export default function Diagnosis() {
           </div>
         </div>
 
-        <TextField id="dugazza" label="상태_1" variant="outlined"></TextField>
-        <TextField id="dugazza" label="상태_2" variant="outlined"></TextField>
+        <TextField id="dugazza" label="사무실" variant="outlined"></TextField>
         <div className="flex justify-center m-5">
           <Button variant="outlined" size="large">
             제출
