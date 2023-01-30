@@ -13,8 +13,8 @@ export default function GroupedSelect2({
 }: Menuitem) {
   return (
     <div>
-      <div className="mx-2 text-lg">{subject}</div>
-      <FormControl sx={{ mx: 1, minWidth: 120 }}>
+      <div className="mb-2 text-lg">{subject}</div>
+      <FormControl sx={{ width: '100%' }}>
         <Select id="grouped-select" defaultValue={devalue}>
           {menuitem.map((ops, idx) => (
             <MenuItem key={idx} value={ops}>

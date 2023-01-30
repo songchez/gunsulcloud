@@ -27,23 +27,21 @@ const businesstype: Businesstype = {
 
 export default function GroupedSelect() {
   return (
-    <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <Select id="grouped-select" defaultValue={`건축`}>
-          <ListSubheader>종합건설업</ListSubheader>
-          {businesstype.종합건설업.map((ops) => (
-            <MenuItem key={ops} value={ops}>
-              {ops}
-            </MenuItem>
-          ))}
-          <ListSubheader>전문건설업</ListSubheader>
-          {businesstype.전문건설업.map((ops) => (
-            <MenuItem key={ops} value={ops}>
-              {ops}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
+    <FormControl sx={{ m: 1, width: '100%' }}>
+      <Select id="grouped-select" defaultValue={`건축`}>
+        <ListSubheader>종합건설업</ListSubheader>
+        {businesstype.종합건설업.map((ops) => (
+          <MenuItem key={ops} value={ops}>
+            {ops}
+          </MenuItem>
+        ))}
+        <ListSubheader>전문건설업</ListSubheader>
+        {businesstype.전문건설업.map((ops) => (
+          <MenuItem key={ops} value={ops}>
+            {ops}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 }
