@@ -27,12 +27,20 @@ export default function Diagnosis() {
         </div>
 
         <GroupedSelect2
-          subject="자본금"
+          subject="보유하고있는 자본금"
           devalue="1억5천"
-          menuitem={['5천', '1억5천', '3억5천', '5억', '7억', '7억 이상']}
+          menuitem={[
+            '5천 이하',
+            '5천',
+            '1억5천',
+            '3억5천',
+            '5억',
+            '7억',
+            '7억 이상',
+          ]}
         />
         <GroupedSelect2
-          subject="사무실"
+          subject="보유하고있는 사무실"
           devalue="미보유"
           menuitem={['미보유', '5평', '10평', '10평 이상']}
         />
