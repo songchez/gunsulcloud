@@ -2,11 +2,17 @@ import { ReactNode } from 'react';
 
 type IBackgroundProps = {
   children: ReactNode;
-  color: string;
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className={props.color}>{props.children}</div>
+  <div className="dee bg-cover bg-center bg-no-repeat bg-black">
+    {props.children}
+    <style global jsx>{`
+      .dee {
+        background-image: url('./assets/images/background.jpg');
+      }
+    `}</style>
+  </div>
 );
 
 export { Background };
