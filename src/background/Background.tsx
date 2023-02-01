@@ -5,11 +5,13 @@ type IBackgroundProps = {
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className="dee bg-cover bg-center bg-no-repeat bg-black">
+  <div className="bg-cover bg-center bg-no-repeat">
     {props.children}
-    <style global jsx>{`
-      .dee {
+    <style jsx>{`
+      div {
         background-image: url('./assets/images/background.jpg');
+        background-color: rgba(255, 255, 255, 0.4);
+        background-blend-mode: lighten;
       }
     `}</style>
   </div>
