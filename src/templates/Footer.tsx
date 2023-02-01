@@ -1,12 +1,11 @@
 import Link from 'next/link';
 
-import { Background } from '../background/Background';
 import { CenteredFooter } from '../footer/CenteredFooter';
 import { Section } from '../layout/Section';
 import { Logo } from './Logo';
 
 const Footer = () => (
-  <Background color="bg-gray-100">
+  <div className="bg-slate-100">
     <Section>
       <CenteredFooter
         logo={<Logo />}
@@ -82,7 +81,7 @@ const Footer = () => (
         </li>
       </CenteredFooter>
     </Section>
-  </Background>
+  </div>
 );
 
 export { Footer };
