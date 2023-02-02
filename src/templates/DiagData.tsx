@@ -18,8 +18,8 @@ interface DiagDataProps {
   등록하고싶은면허: string;
 }
 export default function diagData(diagDataProps: DiagDataProps) {
-  const diagdataRef = doc(db, 'User');
+  const diagdataRef = doc(db, 'User', 'firsts');
   setDoc(diagdataRef, diagDataProps);
 
-  console.log(diagDataProps); // data확인
+  console.log(diagDataProps, '전송완료'); // data확인
 }

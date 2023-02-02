@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { FormControl, ListSubheader, MenuItem, Select } from '@mui/material';
 
 interface Businesstype {
@@ -39,18 +37,15 @@ interface Item {
 }
 
 export default function GroupedSelect(items: Item) {
-  const [selected, setSelected] = useState('');
-  // TODO: selected 데이터 전달!
-
   const onchangeHandler = (event: {
     target: {
       value: string;
       name: string;
     };
   }) => {
-    setSelected(event.target.value);
     items.onchange({
-      target: { value: selected, name: '등록하고싶은면허' },
+      // 부모스테이트에 직접전달
+      target: { value: event.target.value, name: '등록하고싶은면허' },
     });
   };
 
