@@ -12,7 +12,7 @@ const Banner = () => (
       button={
         <Link href="https://byline.network/wp-content/uploads/2018/05/cat.png">
           <a>
-            <Button>신청하기</Button>
+            <Button variant="contained">신청하기</Button>
           </a>
         </Link>
       }
