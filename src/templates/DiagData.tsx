@@ -13,10 +13,13 @@ interface DiagDataProps {
     고급: number;
   };
   사무실: string;
-  보유면허: string[];
+  종합보유면허: string[];
+  전문보유면허: string[];
   등록하고싶은면허: string;
 }
 export default function diagData(diagDataProps: DiagDataProps) {
-  const diagdataRef = doc(db, 'User', 'first');
+  const diagdataRef = doc(db, 'User');
   setDoc(diagdataRef, diagDataProps);
+
+  console.log(diagDataProps); // data확인
 }

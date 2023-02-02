@@ -36,9 +36,18 @@ function getStyles(
         : theme.typography.fontWeightMedium,
   };
 }
+
+interface InputChangeEvent {
+  target: {
+    value: string | any;
+    name: string;
+  };
+}
 interface Names {
   kind: string;
-  names: string[];
+  subjects: string[];
+  onchange: (event: InputChangeEvent) => void;
+  name: string;
 }
 
 export default function MultipleSelectChip(props: Names) {
@@ -53,6 +62,9 @@ export default function MultipleSelectChip(props: Names) {
       // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value
     );
+    props.onchange({
+      target: { value: businessName, name: props.name },
+    });
   };
 
   return (
@@ -75,13 +87,13 @@ export default function MultipleSelectChip(props: Names) {
           )}
           MenuProps={MenuProps}
         >
-          {props.names.map((name) => (
+          {props.subjects.map((subject) => (
             <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, businessName, theme)}
+              key={subject}
+              value={subject}
+              style={getStyles(subject, businessName, theme)}
             >
-              {name}
+              {subject}
             </MenuItem>
           ))}
         </Select>

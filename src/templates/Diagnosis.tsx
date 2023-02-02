@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 
 import { Button, TextField } from '@mui/material';
 
-import { BtngropCustom } from '../components/buttongrop';
+import BtngropCustom from '../components/buttongrop';
 import MultipleSelectChip from '../components/multipleSelectChip';
 import GroupedSelect from '../components/selecttext';
 import GroupedSelect2 from '../components/selecttext_2';
@@ -17,18 +17,20 @@ export default function Diagnosis() {
       초급: 0,
       중급: 0,
       고급: 0,
-    },
+    }, // 기술인력이랑 보유면허만 가져오면 댐
     사무실: '미보유',
-    보유면허: [],
+    종합보유면허: [],
+    전문보유면허: [],
     등록하고싶은면허: 'non',
   });
+
   const submit = () => {
     diagData(theCompany);
   };
 
   const inputChangeHandler = (event: {
     target: {
-      value: string;
+      value: string | any;
       name: string;
     };
   }) => {
@@ -91,7 +93,7 @@ export default function Diagnosis() {
 
         <div className="flex flex-col justify-left gap-4 text-lg">
           <Fragment>기술인력 (해당 위치를 누르면 숫자가 증가합니다.)</Fragment>
-          <BtngropCustom />
+          <BtngropCustom onchange={inputChangeHandler} />
         </div>
 
         <div className=" mt-2 text-lg">
@@ -100,11 +102,13 @@ export default function Diagnosis() {
           <div className="mm:flex flex-col">
             <MultipleSelectChip
               kind="종합건설업"
-              names={['토목', '건축', '토목건축', '산업설비', '조경']}
+              subjects={['토목', '건축', '토목건축', '산업설비', '조경']}
+              onchange={inputChangeHandler}
+              name="종합보유면허"
             ></MultipleSelectChip>
             <MultipleSelectChip
               kind="전문건설업"
-              names={[
+              subjects={[
                 '지반조성포장',
                 '실내건축',
                 '금속창호지붕조립',
@@ -120,6 +124,8 @@ export default function Diagnosis() {
                 '기계가스설비',
                 '가스난방',
               ]}
+              onchange={inputChangeHandler}
+              name="전문보유면허"
             ></MultipleSelectChip>
           </div>
         </div>
@@ -129,7 +135,7 @@ export default function Diagnosis() {
           </h2>
           <div className="border-2 border-primary-400 shadow-lg">
             <div className="flex justify-center">
-              <GroupedSelect />
+              <GroupedSelect onchange={inputChangeHandler} />
             </div>
           </div>
         </div>
@@ -148,7 +154,8 @@ export default function Diagnosis() {
           <div>{`회사명 ${theCompany.회사명}`}</div>
           <div>{`기술인력`}</div>
           <div>{`등록면허 ${theCompany.등록하고싶은면허}`}</div>
-          <div>{`보유면허 ${theCompany.보유면허}`}</div>
+          <div>{`보유면허 ${theCompany.종합보유면허}`}</div>
+          <div>{`보유면허 ${theCompany.전문보유면허}`}</div>
           <div>{`사무실 ${theCompany.사무실}`}</div>
           <div>{`자본금 ${theCompany.자본금}`}</div>
         </div>

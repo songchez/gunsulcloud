@@ -2,7 +2,18 @@ import { useState } from 'react';
 
 import { ButtonGroup, Button } from '@mui/material';
 
-export const BtngropCustom = () => {
+interface InputChangeEvent {
+  target: {
+    value: string | any;
+    name: string;
+  };
+}
+
+interface Item {
+  onchange: (event: InputChangeEvent) => void;
+  // props로 전달할때 객체 파라미터를 받아야 할때 타입을 이런식으로 하면 된다. 구조형타입을 만들어 줄수도 있다.
+}
+export default function BtngropCustom(items: Item) {
   const [Wnumber, setWnumber] = useState({
     기능사: 0,
     초급: 0,
@@ -18,6 +29,9 @@ export const BtngropCustom = () => {
         ...prevState,
         [subject]: prevState[subject] + 1,
       };
+    });
+    items.onchange({
+      target: { value: Wnumber, name: '기술인력' },
     });
   };
   interface Props {
@@ -70,4 +84,4 @@ export const BtngropCustom = () => {
       </Button>
     </ButtonGroup>
   );
-};
+}
