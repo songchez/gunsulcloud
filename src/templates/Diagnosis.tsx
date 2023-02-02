@@ -11,15 +11,23 @@ import GroupedSelect2 from '../components/selecttext_2';
 export default function Diagnosis() {
   const [theCompany, setTheCompany] = useState({
     회사명: 'non',
-    자본금: 'non',
-    사무실: 'non',
-    기술인력: [0, 0, 0, 0],
-    보유면허: ['non', 'non'],
+    자본금: '1억5천',
+    기술인력: {
+      기능사: 0,
+      초급: 0,
+      중급: 0,
+      고급: 0,
+    },
+    사무실: '미보유',
+    보유면허: [],
     등록하고싶은면허: 'non',
   });
 
   const inputChangeHandler = (event: {
-    target: { value: string; name: string };
+    target: {
+      value: string;
+      name: string;
+    };
   }) => {
     const { value, name } = event.target;
     setTheCompany((prevState) => {
@@ -128,7 +136,7 @@ export default function Diagnosis() {
         </div>
         <div>
           <div>{`회사명 ${theCompany.회사명}`}</div>
-          <div>{`기술인력 ${theCompany.기술인력}`}</div>
+          <div>{`기술인력`}</div>
           <div>{`등록면허 ${theCompany.등록하고싶은면허}`}</div>
           <div>{`보유면허 ${theCompany.보유면허}`}</div>
           <div>{`사무실 ${theCompany.사무실}`}</div>
