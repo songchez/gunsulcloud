@@ -20,7 +20,7 @@ export const BtngropCustom = () => {
     });
   };
   interface Props {
-    subject: string;
+    subject: Subject;
     wnumber: number;
   }
 
@@ -28,7 +28,7 @@ export const BtngropCustom = () => {
     return (
       <Button
         onClick={() => {
-          Addnumber('초급');
+          Addnumber(props.subject);
         }}
         size="large"
       >
