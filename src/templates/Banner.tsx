@@ -1,6 +1,6 @@
+import { Button } from '@mui/material';
 import Link from 'next/link';
 
-import { Button } from '../button/Button';
 import { CTABanner } from '../cta/CTABanner';
 import { Section } from '../layout/Section';
 

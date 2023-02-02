@@ -9,7 +9,7 @@ export const BtngropCustom = () => {
     중급: 0,
     고급: 0,
   });
-
+  // TODO: Wnumber 데이터 전달!
   type Subject = '기능사' | '초급' | '중급' | '고급';
 
   const Addnumber = (subject: Subject) => {
