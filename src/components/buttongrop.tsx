@@ -9,6 +9,7 @@ export const BtngropCustom = () => {
     중급: 0,
     고급: 0,
   });
+
   type Subject = '기능사' | '초급' | '중급' | '고급';
 
   const Addnumber = (subject: Subject) => {
