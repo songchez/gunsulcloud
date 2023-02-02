@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import { TextField } from '@mui/material';
 
@@ -9,6 +9,22 @@ import SelectTextFields from '../components/selecttext';
 import GroupedSelect2 from '../components/selecttext_2';
 
 export default function Diagnosis() {
+  const [theCompany, setTheCompany] = useState({
+    회사명: 'non',
+    자본금: 'non',
+    사무실: 'non',
+    기술인력: [0, 0, 0, 0],
+    보유면허: ['non', 'non'],
+    등록하고싶은면허: 'non',
+  });
+
+  const inputChangeHandler = (event: { target: { value: string } }) => {
+    setTheCompany((prevState) => {
+      return { ...prevState, 회사명: event.target.value };
+    });
+    console.log(theCompany);
+  };
+
   return (
     <div className="flex justify-center p-4 bg-primary-100 sm:m-4 rounded-lg">
       <div className="px-4 flex flex-col justify-center gap-8 w-screen max-w-xl">
@@ -22,8 +38,14 @@ export default function Diagnosis() {
           다음 사항들을 빠짐없이 입력해주세요. 정확히 입력하실수록 더 확실한
           분석이 가능해집니다.
         </div>
+        {/* 값 받아오기 */}
         <div className=" flex flex-col justify-center ">
-          <TextField id="bname" label="회사명" variant="outlined"></TextField>
+          <TextField
+            id="bname"
+            label="회사명"
+            variant="outlined"
+            onChange={inputChangeHandler}
+          ></TextField>
         </div>
 
         <GroupedSelect2
