@@ -142,7 +142,12 @@ export default function Diagnosis() {
         </div>
 
         <div className="flex justify-center m-5">
-          <Button color="primary" onClick={submit}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            onClick={submit}
+          >
             제출
           </Button>
         </div>

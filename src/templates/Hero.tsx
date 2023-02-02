@@ -22,7 +22,9 @@ const Hero = () => (
         button={
           <Link href="/">
             <a>
-              <Button>건설업등록신청</Button>
+              <Button variant="contained" color="primary">
+                건설업등록신청
+              </Button>
             </a>
           </Link>
         }
