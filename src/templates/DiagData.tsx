@@ -1,4 +1,4 @@
-import { doc, setDoc } from 'firebase/firestore/lite';
+import { setDoc, doc } from 'firebase/firestore/lite';
 
 import db from '../utils/firebase';
 
@@ -17,7 +17,6 @@ interface DiagDataProps {
   등록하고싶은면허: string;
 }
 export default function diagData(diagDataProps: DiagDataProps) {
-  console.log(diagDataProps);
-  const commentRef = doc(db, 'comments', 'asdasdasd');
-  setDoc(commentRef, { merge: true });
+  const diagdataRef = doc(db, 'User', 'first');
+  setDoc(diagdataRef, diagDataProps);
 }

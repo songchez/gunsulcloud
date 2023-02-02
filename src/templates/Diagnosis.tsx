@@ -23,14 +23,7 @@ export default function Diagnosis() {
     등록하고싶은면허: 'non',
   });
   const submit = () => {
-    diagData({
-      회사명: 'ABC 회사',
-      자본금: '1억5천',
-      기술인력: { 기능사: 10, 초급: 20, 중급: 30, 고급: 40 },
-      사무실: '서울',
-      보유면허: ['A', 'B', 'C'],
-      등록하고싶은면허: 'D',
-    });
+    diagData(theCompany);
   };
 
   const inputChangeHandler = (event: {
