@@ -18,11 +18,16 @@ export default function Diagnosis() {
     등록하고싶은면허: 'non',
   });
 
-  const inputChangeHandler = (event: { target: { value: string } }) => {
+  const inputChangeHandler = (event: {
+    target: { value: string; name: string };
+  }) => {
+    const { value, name } = event.target;
     setTheCompany((prevState) => {
-      return { ...prevState, 회사명: event.target.value };
+      return {
+        ...prevState,
+        [name]: value,
+      };
     });
-    console.log(theCompany);
   };
 
   return (
@@ -44,7 +49,9 @@ export default function Diagnosis() {
             id="bname"
             label="회사명"
             variant="outlined"
+            name="회사명"
             onChange={inputChangeHandler}
+            // TODO:항상 name과 onchange를 같이입력 -> 값 받아오기
           ></TextField>
         </div>
 
@@ -60,11 +67,15 @@ export default function Diagnosis() {
             '7억',
             '7억 이상',
           ]}
+          name="자본금"
+          onchange={inputChangeHandler}
         />
         <GroupedSelect2
           subject="보유하고있는 사무실"
           devalue="미보유"
           menuitem={['미보유', '5평', '10평', '10평 이상']}
+          name="사무실"
+          onchange={inputChangeHandler}
         />
 
         <div className="flex flex-col justify-left gap-4 text-lg">
@@ -114,6 +125,14 @@ export default function Diagnosis() {
 
         <div className="flex justify-center m-5">
           <Button xl={true}>제출</Button>
+        </div>
+        <div>
+          <div>{`회사명 ${theCompany.회사명}`}</div>
+          <div>{`기술인력 ${theCompany.기술인력}`}</div>
+          <div>{`등록면허 ${theCompany.등록하고싶은면허}`}</div>
+          <div>{`보유면허 ${theCompany.보유면허}`}</div>
+          <div>{`사무실 ${theCompany.사무실}`}</div>
+          <div>{`자본금 ${theCompany.자본금}`}</div>
         </div>
       </div>
     </div>
