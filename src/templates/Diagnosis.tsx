@@ -1,12 +1,12 @@
 import { Fragment, useState } from 'react';
 
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
-import { Button } from '../button/Button';
 import { BtngropCustom } from '../components/buttongrop';
 import MultipleSelectChip from '../components/multipleSelectChip';
-import SelectTextFields from '../components/selecttext';
+import GroupedSelect from '../components/selecttext';
 import GroupedSelect2 from '../components/selecttext_2';
+import diagData from './DiagData';
 
 export default function Diagnosis() {
   const [theCompany, setTheCompany] = useState({
@@ -22,6 +22,16 @@ export default function Diagnosis() {
     보유면허: [],
     등록하고싶은면허: 'non',
   });
+  const submit = () => {
+    diagData({
+      회사명: 'ABC 회사',
+      자본금: '1억5천',
+      기술인력: { 기능사: 10, 초급: 20, 중급: 30, 고급: 40 },
+      사무실: '서울',
+      보유면허: ['A', 'B', 'C'],
+      등록하고싶은면허: 'D',
+    });
+  };
 
   const inputChangeHandler = (event: {
     target: {
@@ -126,13 +136,15 @@ export default function Diagnosis() {
           </h2>
           <div className="border-2 border-primary-400 shadow-lg">
             <div className="flex justify-center">
-              <SelectTextFields />
+              <GroupedSelect />
             </div>
           </div>
         </div>
 
         <div className="flex justify-center m-5">
-          <Button xl={true}>제출</Button>
+          <Button color="primary" onClick={submit}>
+            제출
+          </Button>
         </div>
         <div>
           <div>{`회사명 ${theCompany.회사명}`}</div>

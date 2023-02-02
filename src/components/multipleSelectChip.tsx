@@ -44,7 +44,7 @@ interface Names {
 export default function MultipleSelectChip(props: Names) {
   const theme = useTheme();
   const [businessName, setbusinessName] = React.useState<string[]>([]);
-
+  // TODO: businessName 데이터 전달!
   const handleChange = (event: SelectChangeEvent<typeof businessName>) => {
     const {
       target: { value },

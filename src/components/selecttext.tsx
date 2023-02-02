@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { FormControl, ListSubheader, MenuItem, Select } from '@mui/material';
 
 interface Businesstype {
@@ -26,9 +28,26 @@ const businesstype: Businesstype = {
 };
 
 export default function GroupedSelect() {
+  const [selected, setSelected] = useState('');
+  // TODO: selected 데이터 전달!
+
+  const onchangeHandler = (event: {
+    target: {
+      value: string;
+      name: string;
+    };
+  }) => {
+    setSelected(event.target.value);
+    console.log(selected); // 임시
+  };
   return (
     <FormControl sx={{ m: 1, width: '100%' }}>
-      <Select id="grouped-select" defaultValue={`건축`}>
+      <Select
+        id="grouped-select"
+        defaultValue={`건축`}
+        name="등록하고싶은면허"
+        onChange={onchangeHandler}
+      >
         <ListSubheader>종합건설업</ListSubheader>
         {businesstype.종합건설업.map((ops) => (
           <MenuItem key={ops} value={ops}>

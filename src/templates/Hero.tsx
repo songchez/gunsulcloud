@@ -1,7 +1,7 @@
+import { Button } from '@mui/material';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
-import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 
@@ -22,7 +22,7 @@ const Hero = () => (
         button={
           <Link href="/">
             <a>
-              <Button xl>건설업등록신청</Button>
+              <Button>건설업등록신청</Button>
             </a>
           </Link>
         }
