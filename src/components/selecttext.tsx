@@ -26,8 +26,19 @@ const businesstype: Businesstype = {
     '가스난방',
   ],
 };
+interface InputChangeEvent {
+  target: {
+    value: string | any;
+    name: string;
+  };
+}
 
-export default function GroupedSelect() {
+interface Item {
+  onchange: (event: InputChangeEvent) => void;
+  // props로 전달할때 객체 파라미터를 받아야 할때 타입을 이런식으로 하면 된다. 구조형타입을 만들어 줄수도 있다.
+}
+
+export default function GroupedSelect(items: Item) {
   const [selected, setSelected] = useState('');
   // TODO: selected 데이터 전달!
 
@@ -38,8 +49,11 @@ export default function GroupedSelect() {
     };
   }) => {
     setSelected(event.target.value);
-    console.log(selected); // 임시
+    items.onchange({
+      target: { value: selected, name: '등록하고싶은면허' },
+    });
   };
+
   return (
     <FormControl sx={{ m: 1, width: '100%' }}>
       <Select
