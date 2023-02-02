@@ -22,13 +22,13 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/login">
+          <Link href="/about">
             <a
               className={
-                router.pathname === '/login' ? 'text-xl text-orange-500' : ''
+                router.pathname === '/about' ? 'text-xl text-orange-500' : ''
               }
             >
-              로그인
+              About
             </a>
           </Link>
         </li>

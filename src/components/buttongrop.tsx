@@ -25,15 +25,20 @@ export default function BtngropCustom(items: Item) {
 
   const Addnumber = (subject: Subject) => {
     setWnumber((prevState) => {
-      return {
+      // for useState asynchronous issue. 해결
+      const updatedState = {
         ...prevState,
         [subject]: prevState[subject] + 1,
       };
-    });
-    items.onchange({
-      target: { value: Wnumber, name: '기술인력' },
+
+      items.onchange({
+        target: { value: updatedState, name: '기술인력' },
+      });
+
+      return updatedState;
     });
   };
+
   interface Props {
     subject: Subject;
     wnumber: number;
@@ -80,7 +85,7 @@ export default function BtngropCustom(items: Item) {
           ResetNumber();
         }}
       >
-        <span className="whitespace-nowrap">초기화</span>
+        <span className="whitespace-nowrap font-bold">초기화</span>
       </Button>
     </ButtonGroup>
   );

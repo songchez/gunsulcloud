@@ -21,7 +21,7 @@ export default function Diagnosis() {
     사무실: '미보유',
     종합보유면허: [],
     전문보유면허: [],
-    등록하고싶은면허: 'non',
+    등록하고싶은면허: '건축',
   });
 
   const submit = () => {
@@ -150,15 +150,15 @@ export default function Diagnosis() {
             제출
           </Button>
         </div>
-        <div>
+        {/* <div> 디버그용
           <div>{`회사명 ${theCompany.회사명}`}</div>
-          <div>{`기술인력`}</div>
+          <div>{`기술인력${theCompany.기술인력.기능사},${theCompany.기술인력.초급},${theCompany.기술인력.중급},${theCompany.기술인력.고급}`}</div>
           <div>{`등록면허 ${theCompany.등록하고싶은면허}`}</div>
           <div>{`보유면허 ${theCompany.종합보유면허}`}</div>
           <div>{`보유면허 ${theCompany.전문보유면허}`}</div>
           <div>{`사무실 ${theCompany.사무실}`}</div>
           <div>{`자본금 ${theCompany.자본금}`}</div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

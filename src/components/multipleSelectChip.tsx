@@ -58,12 +58,9 @@ export default function MultipleSelectChip(props: Names) {
     const {
       target: { value },
     } = event;
-    setbusinessName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value
-    );
+    setbusinessName(typeof value === 'string' ? value.split(',') : value);
     props.onchange({
-      target: { value: businessName, name: props.name },
+      target: { value: event.target.value, name: props.name },
     });
   };
 
