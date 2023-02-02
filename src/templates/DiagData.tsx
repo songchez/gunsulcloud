@@ -1,4 +1,4 @@
-import { setDoc, doc } from 'firebase/firestore/lite';
+import { setDoc, collection, doc } from 'firebase/firestore/lite';
 
 import db from '../utils/firebase';
 
@@ -18,7 +18,7 @@ interface DiagDataProps {
   등록하고싶은면허: string;
 }
 export default function diagData(diagDataProps: DiagDataProps) {
-  const diagdataRef = doc(db, 'User', 'firsts');
+  const diagdataRef = doc(collection(db, 'User'));
   setDoc(diagdataRef, diagDataProps);
 
   console.log(diagDataProps, '전송완료'); // data확인
