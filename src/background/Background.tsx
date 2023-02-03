@@ -5,7 +5,7 @@ type IBackgroundProps = {
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className="bg-cover bg-center bg-fixed bg-no-repeat">
+  <div className="bg-cover bg-center mm:bg-fixed bg-no-repeat">
     {props.children}
     <style jsx>{`
       div {
