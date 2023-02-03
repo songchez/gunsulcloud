@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
@@ -18,13 +17,13 @@ const Hero = () => (
             <span className="text-primary-400">건설왕에게 맡기세요</span>
           </>
         }
-        description={`신규건설업 등록, 아직도 고민 중이신가요? 여러분도 할 수 있습니다.`}
+        description={`아직도 고민 중이신가요? 여러분도 할 수 있습니다.`}
         button={
           <Link href="/">
             <a>
-              <Button variant="contained" color="primary">
+              <button className="bg-primary-600 hover:bg-primary-400 text-gray-100 font-semibold py-2 px-4 rounded shadow">
                 건설업등록신청
-              </Button>
+              </button>
             </a>
           </Link>
         }

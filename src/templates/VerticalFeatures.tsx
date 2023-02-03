@@ -14,7 +14,7 @@ const VerticalFeatures = () => (
     />
     <VerticalFeatureRow
       title="AI 기업진단"
-      description="'지금 우리 회사의 상태가 어떨까? 자본금, 기술인력, 공제조합 출자금, 사무실 등등......... 면허등록할 때 확인해야 할 항목이 너무 많다. 한눈에 볼 수 없을까?' 알고리즘 기업진단으로 한 번에 확인해보세요! "
+      description="'지금 우리 회사의 상태가 어떨까? 자본금, 기술인력, 공제조합 출자금, 사무실 등등......... 면허등록할 때 확인해야 할 항목이 너무 많다. 한눈에 볼 수 없을까?' AI 기업진단으로 한 번에 확인해보세요! "
       image="/assets/images/feature2.svg"
       imageAlt="두번째 feature alt text"
       reverse={true}
