@@ -1,13 +1,12 @@
 import { Fragment, useState } from 'react';
 
 import { TextField } from '@mui/material';
-import { useRouter } from 'next/router';
 
-import { Button } from '../button/Button';
 import BtngropCustom from '../components/diaginput/buttongrop';
 import MultipleSelectChip from '../components/diaginput/multipleSelectChip';
 import GroupedSelect from '../components/diaginput/selecttext';
 import GroupedSelect2 from '../components/diaginput/selecttext_2';
+import SubmitBackdrop from '../components/onsubmit/submitbackdrop';
 
 export default function Diagnosis() {
   const [theCompany, setTheCompany] = useState({
@@ -24,15 +23,6 @@ export default function Diagnosis() {
     전문보유면허: [],
     등록하고싶은면허: '건축',
   });
-  const router = useRouter();
-  const onSubmit = () => {
-    // diagData(theCompany); // firebase에 전송 TODO:나중에 다시활성화
-    const serializedTheCompany = JSON.stringify(theCompany);
-    router.push({
-      pathname: `/onsubmit`,
-      query: { theCompany: serializedTheCompany },
-    });
-  };
 
   const inputChangeHandler = (event: {
     target: {
@@ -147,9 +137,7 @@ export default function Diagnosis() {
         </div>
 
         <div className="flex justify-center m-5">
-          <a onClick={onSubmit}>
-            <Button text="제출"></Button>
-          </a>
+          <SubmitBackdrop theCompany={theCompany}></SubmitBackdrop>
         </div>
         {/* <div> 디버그용
           <div>{`회사명 ${theCompany.회사명}`}</div>
