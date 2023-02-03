@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+import 'react-phone-input-2/lib/bootstrap.css';
 
 export default function PhoneNumberInput() {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -11,6 +11,15 @@ export default function PhoneNumberInput() {
   };
 
   return (
-    <PhoneInput country={'kr'} value={phoneNumber} onChange={onChangeHandler} />
+    <div className="text-black">
+      <PhoneInput
+        disableCountryCode={true}
+        disableDropdown={true}
+        placeholder="010-1234-5678"
+        country={'ko'}
+        value={phoneNumber}
+        onChange={onChangeHandler}
+      />
+    </div>
   );
 }
