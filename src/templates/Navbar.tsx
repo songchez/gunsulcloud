@@ -8,13 +8,13 @@ import { Logo } from './Logo';
 export default function Navbar() {
   const router = useRouter();
   return (
-    <Section yPadding="py-6">
-      <NavbarTwoColumns logo={<Logo xl />}>
+    <Section yPadding="py-3">
+      <NavbarTwoColumns logo={<Logo />}>
         <li>
           <Link href="/">
             <a
               className={
-                router.pathname === '/' ? 'text-xl text-orange-500' : ''
+                router.pathname === '/' ? 'text-xl text-orange-400' : ''
               }
             >
               홈
@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="/about">
             <a
               className={
-                router.pathname === '/about' ? 'text-xl text-orange-500' : ''
+                router.pathname === '/about' ? 'text-xl text-orange-400' : ''
               }
             >
               About

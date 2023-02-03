@@ -1,7 +1,8 @@
 import { Fragment, useState } from 'react';
 
-import { Button, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 
+import { Button } from '../button/Button';
 import BtngropCustom from '../components/buttongrop';
 import MultipleSelectChip from '../components/multipleSelectChip';
 import GroupedSelect from '../components/selecttext';
@@ -141,14 +142,9 @@ export default function Diagnosis() {
         </div>
 
         <div className="flex justify-center m-5">
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={submit}
-          >
-            제출
-          </Button>
+          <span onClick={submit}>
+            <Button text="제출"></Button>
+          </span>
         </div>
         {/* <div> 디버그용
           <div>{`회사명 ${theCompany.회사명}`}</div>

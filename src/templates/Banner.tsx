@@ -1,6 +1,6 @@
-import { Button } from '@mui/material';
 import Link from 'next/link';
 
+import { Button } from '../button/Button';
 import { CTABanner } from '../cta/CTABanner';
 import { Section } from '../layout/Section';
 
@@ -10,9 +10,9 @@ const Banner = () => (
       title="잠깐!"
       subtitle="전문가에게 더 상세한 진단을 받아보세요"
       button={
-        <Link href="https://byline.network/wp-content/uploads/2018/05/cat.png">
+        <Link href="/">
           <a>
-            <Button variant="contained">신청하기</Button>
+            <Button text="신청하기" />
           </a>
         </Link>
       }
