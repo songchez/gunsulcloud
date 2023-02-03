@@ -1,13 +1,13 @@
 import { Fragment, useState } from 'react';
 
 import { TextField } from '@mui/material';
+import { useRouter } from 'next/router';
 
 import { Button } from '../button/Button';
-import BtngropCustom from '../components/buttongrop';
-import MultipleSelectChip from '../components/multipleSelectChip';
-import GroupedSelect from '../components/selecttext';
-import GroupedSelect2 from '../components/selecttext_2';
-import diagData from './DiagData';
+import BtngropCustom from '../components/diaginput/buttongrop';
+import MultipleSelectChip from '../components/diaginput/multipleSelectChip';
+import GroupedSelect from '../components/diaginput/selecttext';
+import GroupedSelect2 from '../components/diaginput/selecttext_2';
 
 export default function Diagnosis() {
   const [theCompany, setTheCompany] = useState({
@@ -18,15 +18,20 @@ export default function Diagnosis() {
       초급: 0,
       중급: 0,
       고급: 0,
-    }, // 기술인력이랑 보유면허만 가져오면 댐
+    },
     사무실: '미보유',
     종합보유면허: [],
     전문보유면허: [],
     등록하고싶은면허: '건축',
   });
-
-  const submit = () => {
-    diagData(theCompany);
+  const router = useRouter();
+  const onSubmit = () => {
+    // diagData(theCompany); // firebase에 전송 TODO:나중에 다시활성화
+    const serializedTheCompany = JSON.stringify(theCompany);
+    router.push({
+      pathname: `/onsubmit`,
+      query: { theCompany: serializedTheCompany },
+    });
   };
 
   const inputChangeHandler = (event: {
@@ -142,9 +147,9 @@ export default function Diagnosis() {
         </div>
 
         <div className="flex justify-center m-5">
-          <span onClick={submit}>
+          <a onClick={onSubmit}>
             <Button text="제출"></Button>
-          </span>
+          </a>
         </div>
         {/* <div> 디버그용
           <div>{`회사명 ${theCompany.회사명}`}</div>
