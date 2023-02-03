@@ -1,19 +1,16 @@
 import { useState } from 'react';
 
-import PhoneInput from 'react-phone-number-input/input';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 export default function PhoneNumberInput() {
-  // `value` will be the parsed phone number in E.164 format.
-  // Example: "+12133734253".
-  const [value, setValue] = useState();
+  const [phoneNumber, setPhoneNumber] = useState('');
 
-  const onchangeHandler = (e: any) => {
-    if (String(e).length < 15) {
-      setValue(e);
-    } else {
-      console.log(String(e));
-      console.log(value);
-    }
+  const onChangeHandler = (phone: string) => {
+    setPhoneNumber(phone);
   };
-  return <PhoneInput country="KR" value={value} onChange={onchangeHandler} />;
+
+  return (
+    <PhoneInput country={'kr'} value={phoneNumber} onChange={onChangeHandler} />
+  );
 }
