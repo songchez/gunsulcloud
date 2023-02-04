@@ -53,7 +53,7 @@ export default function BtngropCustom(items: Item) {
         size="large"
       >
         <div className="flex flex-col items-center">
-          <p className="p-1 whitespace-nowrap text-center font-bold text-xs sm:text-base">
+          <p className="p-1 whitespace-nowrap text-center font-bold text-xs sx:text-base">
             {props.subject}
           </p>
           <div className="border-2 border-primary-500 w-7 h-7 text-primary-500 font-bold">

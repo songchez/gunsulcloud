@@ -23,7 +23,7 @@ const CenteredFooter = (props: ICenteredFooterProps) => (
       <FooterIconList>{props.iconList}</FooterIconList>
     </div>
 
-    <div className="mt-8 text-sm">
+    <div className="mt-8 text-ss">
       <FooterCopyright />
     </div>
 

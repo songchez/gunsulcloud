@@ -40,7 +40,7 @@ export default function Diagnosis() {
   };
 
   return (
-    <div className="flex justify-center p-4 bg-primary-100 sm:m-4 rounded-lg">
+    <div className="flex justify-center p-4 bg-primary-100 ss:m-4 rounded-lg">
       <div className="px-4 flex flex-col justify-center gap-8 w-screen max-w-xl">
         <div className="text-2xl font-semibold">
           <div className="text-primary-500 text-left m-3 text-3xl font-bold">

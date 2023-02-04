@@ -38,10 +38,7 @@ export default function SubmitBackdrop({ theCompany }: Props) {
         {Submit ? (
           <OnSubmit theCompany={theCompany}></OnSubmit>
         ) : (
-          <div className="flex flex-col">
-            <h1 className="text-3xl">
-              결과를 확인하려면 전화번호를 입력하세요
-            </h1>
+          <div className="container p-7 flex flex-col gap-20 items-center">
             <PhoneNumberInput />
             <Button text="결과보기" onClick={onSubmit} />
           </div>
