@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Backdrop } from '@mui/material';
 
 import { Button } from '../../button/Button';
+import diagData from '../../templates/DiagData';
 import OnSubmit from './onsubmit';
 import PhoneNumberInput from './phonenumber';
 
 interface Props {
   theCompany: DiagData;
+  setTheCompany: SetTheCompany;
 }
-export default function SubmitBackdrop({ theCompany }: Props) {
+
+// 나가면 전화번호 없이 전송. 입력하면 카톡으로 전송
+export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
   const [open, setOpen] = React.useState(false);
   const [Submit, setSubmit] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
     setSubmit(false);
+    // diagData(theCompany); // 전화번호없이전송 TODO:나중에 다시활성화
   };
   const handleToggle = () => {
     setOpen(!open);
@@ -24,7 +29,7 @@ export default function SubmitBackdrop({ theCompany }: Props) {
   };
   const onSubmit = () => {
     OnSubmithandler();
-    // diagData(theCompany); // firebase에 전송 TODO:나중에 다시활성화
+    diagData(theCompany); // 전화번호넣고 전송
   };
 
   return (
@@ -36,11 +41,27 @@ export default function SubmitBackdrop({ theCompany }: Props) {
         onDoubleClick={handleClose}
       >
         {Submit ? (
-          <OnSubmit theCompany={theCompany}></OnSubmit>
+          <OnSubmit></OnSubmit>
         ) : (
-          <div className="container p-7 flex flex-col gap-20 items-center">
-            <PhoneNumberInput />
-            <Button text="결과보기" onClick={onSubmit} />
+          <div className="container p-7 flex flex-col gap-7 items-center">
+            <div className="sx:mx-1 sm:mx-2">
+              <span className="text-xl sx:text-2xl ss:text-3xl text-gray-100 mb-2">
+                <span className="text-primary-400">{theCompany.회사명}</span>의
+                <br />
+                <span className="text-primary-400">
+                  {theCompany.등록하고싶은면허}면허
+                </span>
+                등록의 <br />
+                분석결과를 확인하기 위해
+                <br />
+                귀하의 전화번호를 입력해주세요
+              </span>
+            </div>
+            <PhoneNumberInput setTheCompany={setTheCompany} />
+            <div className="flex flex-col gap-1">
+              <Button text="분석결과보기" onClick={onSubmit} />
+              <Fragment>결과는 카톡으로 전송됩니다.</Fragment>
+            </div>
           </div>
         )}
       </Backdrop>

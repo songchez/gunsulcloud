@@ -2,13 +2,6 @@ import { useState } from 'react';
 
 import { ButtonGroup, Button } from '@mui/material';
 
-interface InputChangeEvent {
-  target: {
-    value: string | any;
-    name: string;
-  };
-}
-
 interface Item {
   onchange: (event: InputChangeEvent) => void;
   // props로 전달할때 객체 파라미터를 받아야 할때 타입을 이런식으로 하면 된다. 구조형타입을 만들어 줄수도 있다.

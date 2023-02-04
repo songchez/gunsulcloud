@@ -10,6 +10,7 @@ import SubmitBackdrop from '../components/onsubmit/submitbackdrop';
 
 export default function Diagnosis() {
   const [theCompany, setTheCompany] = useState({
+    전화번호: '0000000',
     회사명: 'non',
     자본금: '1억5천',
     기술인력: {
@@ -137,7 +138,10 @@ export default function Diagnosis() {
         </div>
 
         <div className="flex justify-center m-5">
-          <SubmitBackdrop theCompany={theCompany}></SubmitBackdrop>
+          <SubmitBackdrop
+            theCompany={theCompany}
+            setTheCompany={setTheCompany}
+          ></SubmitBackdrop>
         </div>
         {/* <div> 디버그용
           <div>{`회사명 ${theCompany.회사명}`}</div>

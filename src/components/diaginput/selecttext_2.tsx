@@ -1,12 +1,5 @@
 import { FormControl, MenuItem, Select } from '@mui/material';
 
-interface InputChangeEvent {
-  target: {
-    value: string;
-    name: string;
-  };
-}
-
 interface Menuitem {
   menuitem: string[];
   subject: string;

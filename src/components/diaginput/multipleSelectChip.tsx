@@ -37,12 +37,6 @@ function getStyles(
   };
 }
 
-interface InputChangeEvent {
-  target: {
-    value: string | any;
-    name: string;
-  };
-}
 interface Names {
   kind: string;
   subjects: string[];

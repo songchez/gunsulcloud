@@ -24,12 +24,6 @@ const businesstype: Businesstype = {
     '가스난방',
   ],
 };
-interface InputChangeEvent {
-  target: {
-    value: string | any;
-    name: string;
-  };
-}
 
 interface Item {
   onchange: (event: InputChangeEvent) => void;
