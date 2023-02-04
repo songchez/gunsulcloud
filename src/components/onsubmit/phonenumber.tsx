@@ -16,7 +16,7 @@ export default function PhoneNumberInput() {
         disableCountryCode={true}
         disableDropdown={true}
         placeholder="010-1234-5678"
-        country={'ko'}
+        country={'kr'}
         value={phoneNumber}
         onChange={onChangeHandler}
       />

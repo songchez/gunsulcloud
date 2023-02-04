@@ -7,5 +7,6 @@ export default function diagData(diagDataProps: DiagData) {
   const diagdataRef = doc(collection(db, 'User'));
   setDoc(diagdataRef, diagDataProps);
 
+  // eslint-disable-next-line no-console
   console.log(diagDataProps, '전송완료'); // data확인
 }
