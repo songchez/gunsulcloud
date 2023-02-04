@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import { Backdrop } from '@mui/material';
 
@@ -14,11 +14,14 @@ interface Props {
 
 // 나가면 전화번호 없이 전송. 입력하면 카톡으로 전송
 export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
-  const [open, setOpen] = React.useState(false);
-  const [Submit, setSubmit] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [Submit, setSubmit] = useState(false);
+  const [Prograss, setPrograss] = useState(true);
   const handleClose = () => {
+    // 닫으면 초기화
     setOpen(false);
-    setSubmit(false);
+    setTimeout(() => setSubmit(false), 250);
+    setPrograss(true);
     // diagData(theCompany); // 전화번호없이전송 TODO:나중에 다시활성화
   };
   const handleToggle = () => {
@@ -30,6 +33,8 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
   const onSubmit = () => {
     OnSubmithandler();
     diagData(theCompany); // 전화번호넣고 전송
+    setTimeout(() => setPrograss(!Prograss), 500);
+    setTimeout(() => handleClose(), 3000);
   };
 
   return (
@@ -41,7 +46,7 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
         onDoubleClick={handleClose}
       >
         {Submit ? (
-          <OnSubmit></OnSubmit>
+          <OnSubmit Prograss={Prograss}></OnSubmit>
         ) : (
           <div className="container p-7 flex flex-col gap-7 items-center">
             <div className="sx:mx-1 sm:mx-2">
