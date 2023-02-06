@@ -34,6 +34,14 @@ const Footer = () => (
                 </svg>
               </a>
             </Link>
+            <div
+              id="kakao-talk-channel-add-button"
+              data-channel-public-id="_atExexj"
+              data-size="small"
+              data-support-multiple-densities="true"
+            >
+              <img src="/consult_large_yellow_mobile.png" alt="kakao"></img>
+            </div>
           </>
         }
       >
