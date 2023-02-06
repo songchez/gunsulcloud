@@ -7,7 +7,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/ms-icon-144x144.png" />
+        </Head>
         <body>
           <Main />
           <NextScript />

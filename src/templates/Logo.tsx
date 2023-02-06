@@ -1,10 +1,10 @@
-import { AppConfig } from '../utils/AppConfig';
+import Image from 'next/image';
 
 const Logo = () => {
   return (
-    <span className="text-primary-400 inline-flex items-center font-bold text-2xl ss:text-4xl mm:text-6xl">
-      {AppConfig.site_name}
-    </span>
+    <div>
+      <Image src="/logo1234.png" alt="logo" width={75} height={28}></Image>
+    </div>
   );
 };
 
