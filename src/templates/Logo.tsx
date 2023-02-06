@@ -1,9 +1,11 @@
 import Image from 'next/image';
 
+import profilePic from '../public/logo1234.png';
+
 const Logo = () => {
   return (
     <div>
-      <Image src="/logo1234.png" alt="logo" width={75} height={28}></Image>
+      <Image src={profilePic} alt="logo" width={75} height={28}></Image>
     </div>
   );
 };
