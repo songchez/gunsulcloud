@@ -2,8 +2,6 @@ import { ReactNode } from 'react';
 
 import { useRouter } from 'next/router';
 
-import { AppConfig } from '../utils/AppConfig';
-
 type IHeroOneButtonProps = {
   title: ReactNode;
   description: string;
@@ -16,8 +14,8 @@ const HeroOneButton = (props: IHeroOneButtonProps) => {
     <header className="text-center">
       <div className="flex justify-center">
         <img
-          src={`${router.basePath}${AppConfig.logo}`}
-          alt="bannerlogo"
+          src={`${router.basePath}/assets/images/logo2.png`}
+          alt="herologo"
           className="w-full max-w-xl px-5"
         ></img>
       </div>
