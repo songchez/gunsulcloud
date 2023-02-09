@@ -5,7 +5,7 @@ const FooterCopyright = () => (
     © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
     <span role="img" aria-label="Love">
       ♥
-    </span>{' '}
+    </span>
     by <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
     {/*
      * PLEASE READ THIS SECTION
