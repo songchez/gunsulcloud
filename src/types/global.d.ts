@@ -22,6 +22,9 @@ declare global {
       name: string;
     };
   }
+  interface Window {
+    Kakao: any;
+  }
   type SetTheCompany = Dispatch<
     SetStateAction<{
       전화번호: string;
