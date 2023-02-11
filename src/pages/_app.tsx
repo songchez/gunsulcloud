@@ -10,7 +10,6 @@ import '../styles/global.css';
 export default function MyApp({ Component, pageProps }: AppProps) {
   function Kakao() {
     window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY);
-    console.log(window.Kakao.isInitialized());
   }
   return (
     <ThemeProvider theme={theme}>
