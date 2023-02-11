@@ -19,7 +19,7 @@ const Hero = () => (
         }
         description={`아직도 고민 중이신가요? 여러분도 할 수 있습니다.`}
         button={
-          <Link href="/">
+          <Link href="http://pf.kakao.com/_atExexj/chat">
             <a>
               <button className="bg-primary-600 hover:bg-primary-400 text-gray-100 font-semibold py-2 px-4 rounded shadow">
                 건설업등록신청

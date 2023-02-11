@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
 import { Backdrop } from '@mui/material';
 
@@ -17,6 +17,7 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
   const [open, setOpen] = useState(false);
   const [Submit, setSubmit] = useState(false);
   const [Prograss, setPrograss] = useState(true);
+
   const handleClose = () => {
     // 닫으면 초기화
     setOpen(false);
@@ -35,6 +36,10 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
     diagData(theCompany); // 전화번호넣고 전송
     setTimeout(() => setPrograss(!Prograss), 500);
     setTimeout(() => handleClose(), 3000);
+    // kakao channel 추가
+    window.Kakao.Channel.addChannel({
+      channelPublicId: '_atExexj',
+    });
   };
 
   return (
@@ -64,8 +69,11 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
             </div>
             <PhoneNumberInput setTheCompany={setTheCompany} />
             <div className="flex flex-col gap-1">
-              <Button text="분석결과보기" onClick={onSubmit} />
-              <Fragment>결과는 카톡으로 전송됩니다.</Fragment>
+              <Button
+                text="카카오 채널추가하고 분석결과보기"
+                onClick={onSubmit}
+              />
+              <p className="text-center">결과는 카톡으로 전송됩니다.</p>
             </div>
           </div>
         )}
