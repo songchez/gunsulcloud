@@ -64,7 +64,7 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
                 등록의 <br />
                 분석결과를 확인하기 위해
                 <br />
-                귀하의 전화번호를 입력해주세요
+                연락처를 입력해주세요
               </span>
             </div>
             <PhoneNumberInput setTheCompany={setTheCompany} />
