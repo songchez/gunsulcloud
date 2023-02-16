@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Background } from '../background/Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
+import { AppConfig } from '../utils/AppConfig';
 
 const Hero = () => (
   <Background>
@@ -14,7 +15,7 @@ const Hero = () => (
             <br></br>
             <span>이제 고민하지마세요</span>
             <br></br>
-            <span className="text-primary-400">건설왕에게 맡기세요</span>
+            <span className="text-primary-400">{`${AppConfig.site_name}하세요`}</span>
           </>
         }
         description={`아직도 고민 중이신가요? 여러분도 할 수 있습니다.`}
