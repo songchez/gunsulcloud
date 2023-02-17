@@ -1,26 +1,17 @@
 import { ReactNode } from 'react';
 
-import Link from 'next/link';
-
 type INavbarProps = {
   logo: ReactNode;
   children: ReactNode;
 };
 
 const NavbarTwoColumns = (props: INavbarProps) => (
-  <div className="flex flex-wrap justify-between items-center mm:mx-3">
-    <div>
-      <Link href="/">
-        <a>{props.logo}</a>
-      </Link>
-    </div>
-
+  <div className="flex flex-col justify-center items-center mm:mx-3">
     <nav>
       <ul className="navbar flex items-center font-medium text-xl text-gray-500">
         {props.children}
       </ul>
     </nav>
-
     <style jsx>
       {`
         .navbar :global(li:not(:first-child)) {

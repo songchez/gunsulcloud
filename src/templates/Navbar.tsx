@@ -14,7 +14,7 @@ export default function Navbar() {
           <Link href="/">
             <a
               className={
-                router.pathname === '/' ? 'text-xl text-orange-400' : ''
+                router.pathname === '/' ? 'text-xl text-primary-600' : ''
               }
             >
               홈
@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="/about">
             <a
               className={
-                router.pathname === '/about' ? 'text-xl text-orange-400' : ''
+                router.pathname === '/about' ? 'text-xl text-primary-600' : ''
               }
             >
               About

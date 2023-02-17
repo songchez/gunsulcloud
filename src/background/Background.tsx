@@ -10,8 +10,8 @@ const Background = (props: IBackgroundProps) => (
     <style jsx>{`
       div {
         background-image: url('./assets/images/background.jpg');
-        background-color: rgba(25, 25, 25, 0.5);
-        background-blend-mode: darken;
+        background-color: rgba(255, 255, 255, 0.5);
+        background-blend-mode: color;
       }
     `}</style>
   </div>

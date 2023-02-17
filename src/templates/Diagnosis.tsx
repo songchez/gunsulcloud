@@ -127,10 +127,10 @@ export default function Diagnosis() {
           </div>
         </div>
         <div>
-          <h2 className="text-lg mm:text-2xl text-primary-400 mb-2">
+          <h2 className="text-lg mm:text-2xl text-primary-600 mb-2">
             등록하고 싶은 면허
           </h2>
-          <div className="border-2 border-primary-400 shadow-lg">
+          <div className="border-2 border-primary-600 shadow-lg">
             <div className="flex justify-center">
               <GroupedSelect onchange={inputChangeHandler} />
             </div>
