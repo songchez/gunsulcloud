@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { AppConfig } from '../utils/AppConfig';
@@ -8,12 +7,7 @@ const Logo = () => {
     <div className="flex justify-center">
       <Link href={'/'}>
         <a>
-          <Image
-            width={512}
-            height={167}
-            src={AppConfig.logo}
-            alt="logo"
-          ></Image>
+          <img src={AppConfig.logo} alt="logo"></img>
         </a>
       </Link>
     </div>
