@@ -134,42 +134,27 @@ export default function ConstructionRegistration() {
         <br />
         <h2 className="m-1 text-xl">전문건설업 등록기준</h2>
         <br />
-        <h3 className="m-1">지반조성ㆍ포장공사업</h3>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} size="small" aria-label="table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="center" sx={{ width: 90 }}>
-                  직무분야
-                </TableCell>
-                <TableCell align="center" sx={{ width: 350 }}>
-                  기술능력
-                </TableCell>
-                <TableCell align="center" sx={{ width: 250 }}>
-                  시설장비
-                </TableCell>
-                <TableCell align="center" sx={{ width: 140 }}>
-                  자본금
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {exRows1.map((row) => (
-                <TableRow
-                  key={row.name}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="left">{row.peoSkill}</TableCell>
-                  <TableCell align="left">{row.cash}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TableTem data={exRows2}></TableTem>
+        <TableTem department="지반조성ㆍ포장공사업" data={exRows1}></TableTem>
+        <TableTem department="실내건축공사업" data={exRows2}></TableTem>
+        <TableTem
+          department="금속창호ㆍ지붕건축물조립공사업"
+          data={exRows2}
+        ></TableTem>
+        <TableTem
+          department="도장ㆍ습식ㆍ방수ㆍ석공사업"
+          data={exRows2}
+        ></TableTem>
+        <TableTem department="조경식재ㆍ시설물공사업" data={exRows2}></TableTem>
+        <TableTem department="철근ㆍ콘크리트공사업" data={exRows2}></TableTem>
+        <TableTem department="구조물해체ㆍ비계공사업" data={exRows2}></TableTem>
+        <TableTem department="상ㆍ하수도설비공사업" data={exRows2}></TableTem>
+        <TableTem department="철도ㆍ궤도공사업" data={exRows2}></TableTem>
+        <TableTem department="철강구조물공사업" data={exRows2}></TableTem>
+        <TableTem department="수중ㆍ준설공사업" data={exRows2}></TableTem>
+        <TableTem department="승강기ㆍ삭도공사업" data={exRows2}></TableTem>
+        <TableTem department="기계가스설비공사업" data={exRows2}></TableTem>
+        <TableTem department="가스난방공사업" data={exRows2}></TableTem>
+        <TableTem department="시설물유지관리업" data={exRows2}></TableTem>
       </div>
     </div>
   );
