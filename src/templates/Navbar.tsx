@@ -22,13 +22,15 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href="/ConstructionRegistration">
             <a
               className={
-                router.pathname === '/about' ? 'text-xl text-primary-600' : ''
+                router.pathname === '/ConstructionRegistration'
+                  ? 'text-xl text-primary-600'
+                  : ''
               }
             >
-              About
+              건설정보
             </a>
           </Link>
         </li>

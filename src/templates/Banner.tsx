@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { Button } from '../button/Button';
 import { CTABanner } from '../cta/CTABanner';
+import { PhoneBanner } from '../cta/PhoneBanner';
 import { Section } from '../layout/Section';
 
 const Banner = () => (
@@ -17,6 +18,8 @@ const Banner = () => (
         </Link>
       }
     />
+    <br></br>
+    <PhoneBanner title="고객상담센터" subtitle="Customer Service" />
   </Section>
 );
 
