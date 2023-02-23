@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 
 interface Props {
   department: string;
-  data: { name: string; peoSkill: string; cash: string }[];
+  data: { name: string; peoSkill: string; equipment: string; cash: string }[];
 }
 export default function TableTem(props: Props) {
   return (
@@ -43,6 +43,7 @@ export default function TableTem(props: Props) {
                     {row.name}
                   </TableCell>
                   <TableCell align="left">{row.peoSkill}</TableCell>
+                  <TableCell align="left">{row.equipment}</TableCell>
                   <TableCell align="left">{row.cash}</TableCell>
                 </TableRow>
               ))}
