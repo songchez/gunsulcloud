@@ -38,7 +38,7 @@ export default function SubmitBackdrop({ theCompany, setTheCompany }: Props) {
     setTimeout(() => handleClose(), 3000);
     // kakao channel 추가
     window.Kakao.Channel.addChannel({
-      channelPublicId: '_atExexj',
+      channelPublicId: '_xnxkBexj',
     });
   };
 
