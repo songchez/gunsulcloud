@@ -7,26 +7,24 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
 interface Props {
-  department: string;
-  data: { name: string; peoSkill: string; equipment: string; cash: string }[];
+  data: { name: string; subname: string; peoSkill: string; cash: string }[];
 }
 export default function TableTem(props: Props) {
   return (
     <div className="bg-primary-100">
-      <h3 className="p-1">{props.department}</h3>
       <div className="p-1">
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} size="small" aria-label="table">
             <TableHead>
               <TableRow>
                 <TableCell align="center" sx={{ width: 90 }}>
-                  직무분야
+                  건설종목
+                </TableCell>
+                <TableCell align="center" sx={{ width: 350 }}>
+                  주력분야
                 </TableCell>
                 <TableCell align="center" sx={{ width: 350 }}>
                   기술능력
-                </TableCell>
-                <TableCell align="center" sx={{ width: 250 }}>
-                  시설장비
                 </TableCell>
                 <TableCell align="center" sx={{ width: 140 }}>
                   자본금
@@ -42,8 +40,8 @@ export default function TableTem(props: Props) {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
+                  <TableCell align="left">{row.subname}</TableCell>
                   <TableCell align="left">{row.peoSkill}</TableCell>
-                  <TableCell align="left">{row.equipment}</TableCell>
                   <TableCell align="left">{row.cash}</TableCell>
                 </TableRow>
               ))}
