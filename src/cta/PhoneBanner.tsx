@@ -15,10 +15,10 @@ const PhoneBanner = (props: PhoneBannerProps) => (
     </div>
     <div className="ss:text-2xl mt-2 ss:mt-0">
       <div className="text-primary-800">
-        <CallIcon /> TEL. 031-246-2343
+        <CallIcon /> TEL. 031-941-5592
       </div>
       <div className="text-primary-700">
-        <FaxIcon /> FAX. 031-246-2343
+        <FaxIcon /> FAX. 031-942-4911
       </div>
       <div className="text-primary-500">
         <EmailIcon /> E-mail. sunjinju72@naver.com
