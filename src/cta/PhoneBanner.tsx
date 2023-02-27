@@ -13,7 +13,7 @@ const PhoneBanner = (props: PhoneBannerProps) => (
       <div className="text-gray-900">{props.title}</div>
       <div className="text-primary-500">{props.subtitle}</div>
     </div>
-    <div className="ss:text-2xl mt-2 ss:mt-0">
+    <div className="ss:text-lg mt-2 ss:mt-0">
       <div className="text-primary-800">
         <CallIcon /> TEL. 031-941-5592
       </div>
