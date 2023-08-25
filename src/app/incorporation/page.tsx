@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function Incorporation() {
-  return (
-    <div>
-      <h1>법인설립</h1>
-    </div>
-  );
+export default function Incoporation() {
+  return <div>법인설립</div>;
 }
