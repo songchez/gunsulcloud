@@ -8,7 +8,7 @@ type IHeroOneButtonProps = {
 
 const HeroOneButton = (props: IHeroOneButtonProps) => {
   return (
-    <div className="w-full text-center backdrop-brightness-50 h-screen">
+    <div className="w-full text-center backdrop-brightness-75 h-screen">
       <h1 className="text-5xl sm:text-5xl md:text-6xl text-neutral-content font-bold pt-32">
         {props.title}
       </h1>

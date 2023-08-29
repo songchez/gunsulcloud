@@ -23,7 +23,7 @@ export default function RootLayout({
     <html
       lang="kr"
       className={`scroll-smooth ${inter.className}`}
-      data-theme="luxury"
+      data-theme="corporate"
     >
       <body>
         <Navbar />
