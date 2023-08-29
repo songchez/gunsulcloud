@@ -1,5 +1,5 @@
-import { getPost } from "@/components/getMdx/getPost";
-import { MdxContent } from "@/components/getMdx/mdx-content";
+import { getPost } from "@/service/getMdx/getPost";
+import { MdxContent } from "@/service/getMdx/mdx-content";
 import { getPageMetadata } from "@/service/getPageProps";
 import { Metadata } from "next";
 
@@ -21,12 +21,11 @@ export async function generateMetadata({
 }
 
 export default async function Slug({ params: { slug } }: Props) {
-  const postPath: string = `content/${slug}.mdx`;
+  const postPath: string = `content/${slug}/main.mdx`;
   const { serialized } = await getPost(postPath);
 
   return (
-    <div>
-      <hr />
+    <div className="prose dark:prose-dark">
       <MdxContent source={serialized} />
     </div>
   );
