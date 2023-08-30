@@ -25,8 +25,10 @@ export default async function Slug({ params: { slug } }: Props) {
   const { serialized } = await getPost(postPath);
 
   return (
-    <div className="prose dark:prose-dark">
-      <MdxContent source={serialized} />
+    <div className="prose dark:prose-dark m-10">
+      <div className="js-toc-content">
+        <MdxContent source={serialized} />
+      </div>
     </div>
   );
 }

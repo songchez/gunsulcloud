@@ -3,6 +3,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { promises as fs } from "fs";
 import remarkToc from "remark-toc";
 import remarkBreaks from "remark-breaks";
+import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 
@@ -27,6 +28,7 @@ export async function getPost(filepath: string): Promise<Post<Frontmatter>> {
       remarkPlugins: [remarkToc, remarkBreaks, remarkGfm],
       rehypePlugins: [
         [
+          rehypeSlug,
           rehypeAutolinkHeadings,
           {
             properties: {
@@ -37,7 +39,6 @@ export async function getPost(filepath: string): Promise<Post<Frontmatter>> {
       ],
     },
   });
-
   // Typecast the frontmatter to the correct type
   const frontmatter = serialized.frontmatter as Frontmatter;
 
