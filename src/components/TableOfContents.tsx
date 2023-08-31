@@ -9,7 +9,6 @@ const TableOfContents: React.FC = () => {
       tocSelector: ".toc", // TOC를 삽입할 위치의 CSS 선택자
       contentSelector: ".js-toc-content", // TOC를 생성할 콘텐츠의 CSS 선택자
       headingSelector: "h1, h2, h3", // TOC에 포함할 제목 레벨
-      scrollSmoothOffset: -40,
     });
 
     // 컴포넌트가 언마운트될 때 TOCbot 정리
