@@ -19,11 +19,11 @@ const TableOfContents: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-40 sticky">
+    <div className="mt-40 sticky top-10">
       <nav className="toc"></nav>
       <style jsx global>{`
         .toc {
-          background-color: var(--content-bg-primary);
+          background-color: var(--bg-primary);
           border: 1px solid var(--content-border);
           border-radius: 0.25rem;
           padding: 1rem;
@@ -33,11 +33,9 @@ const TableOfContents: React.FC = () => {
           padding-left: 1rem;
           padding-top: 0.5rem;
         }
-
         .toc-list-item {
           padding-bottom: 0.5rem;
         }
-
         .toc-list-item:last-child {
           padding-bottom: 0;
         }
@@ -47,8 +45,9 @@ const TableOfContents: React.FC = () => {
         }
 
         .is-active-link {
-          color: var(--text-primary);
-          font-weight: 700;
+          --tw-text-opacity: 1;
+          color: hsl(var(--p) / var(--tw-text-opacity));
+          font-weight: 800;
         }
       `}</style>
     </div>

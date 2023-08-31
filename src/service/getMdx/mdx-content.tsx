@@ -12,10 +12,10 @@ const MdxComponents = {
     <h1 className="text-5xl font-bold" {...props} />
   ),
   h2: (props: React.HTMLProps<HTMLHeadingElement>) => (
-    <h1 className="text-4xl font-bold" {...props} />
+    <h2 className="text-4xl font-bold" {...props} />
   ),
   h3: (props: React.HTMLProps<HTMLHeadingElement>) => (
-    <h1 className="text-3xl font-bold" {...props} />
+    <h3 className="text-3xl font-bold" {...props} />
   ),
   /** Card component */
   Card: (props: React.HTMLProps<HTMLDivElement>) => (

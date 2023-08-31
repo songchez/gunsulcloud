@@ -1,7 +1,6 @@
 import { type MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { promises as fs } from "fs";
-import remarkToc from "remark-toc";
 import remarkBreaks from "remark-breaks";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -25,7 +24,7 @@ export async function getPost(filepath: string): Promise<Post<Frontmatter>> {
   const serialized = await serialize(raw, {
     parseFrontmatter: true,
     mdxOptions: {
-      remarkPlugins: [remarkToc, remarkBreaks, remarkGfm],
+      remarkPlugins: [ remarkBreaks, remarkGfm],
       rehypePlugins: [
         [
           rehypeSlug,
