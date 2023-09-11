@@ -32,3 +32,14 @@ export default async function Slug({ params: { slug } }: Props) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  const pages = [
+    "clientservice",
+    "firmdiagnosis",
+    "incorporation",
+    "mna",
+    "registration",
+  ];
+  return pages.map((page) => ({ slug: page }));
+}
