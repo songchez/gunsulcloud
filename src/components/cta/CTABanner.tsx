@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 type ICTABannerProps = {
   title: string;
@@ -12,7 +12,6 @@ const CTABanner = (props: ICTABannerProps) => (
       <div className="text-gray-900">{props.title}</div>
       <div className="text-primary-500">{props.subtitle}</div>
     </div>
-
     <div className="whitespace-no-wrap mt-3 ss:mt-0 ss:ml-2">
       {props.button}
     </div>

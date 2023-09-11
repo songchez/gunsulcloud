@@ -18,8 +18,8 @@ const Hero = () => (
       }
       description={`언제나 건설클라우드를 사랑해 주셔서 감사합니다.`}
       button={
-        <a className="btn" href="http://pf.kakao.com/_xnxkBexj/chat">
-          건설업등록신청
+        <a href="http://pf.kakao.com/_xnxkBexj/chat">
+          <button className="btn glass">건설업등록신청</button>
         </a>
       }
     />
