@@ -1,0 +1,27 @@
+[
+  {
+    "url": "clientservice",
+    "title": "고객지원",
+    "description": "언제든지 고객님과 소통하겠습니다! 건설클라우드 고객지원페이지 입니다."
+  },
+  {
+    "url": "firmdiagnosis",
+    "title": "기업진단",
+    "description": "모든 일을 하기에 앞서서 해야할 일! 건설클라우드 기업진단 페이지 입니다."
+  },
+  {
+    "url": "incorporation",
+    "title": "법인설립",
+    "description": "법인설립에 필요한 모든 것! 건설클라우드 법인설립페이지 입니다."
+  },
+  {
+    "url": "mna",
+    "title": "양도양수",
+    "description": "귀사에 딱! 맞는 양도양수물건 추천해주는 건설클라우드 양도양수페이지 입니다."
+  },
+  {
+    "url": "registration",
+    "title": "신규등록",
+    "description": "건설클라우드만 따라오면 신규등록 어렵지 않아! 건설클라우드 신규등록페이지 입니다."
+  }
+]

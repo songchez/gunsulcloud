@@ -1,10 +1,10 @@
 import "./globals.css";
 import Navbar from "../templates/Navbar";
 import Footer from "../templates/Footer";
-import { Inter } from "next/font/google";
+import { Gothic_A1 } from "next/font/google";
 import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+const gothicA1 = Gothic_A1({ subsets: ["latin"], weight: "600" });
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="kr"
-      className={`scroll-smooth ${inter.className}`}
+      className={`scroll-smooth ${gothicA1.className}`}
       data-theme="corporate"
     >
       <body>

@@ -16,8 +16,8 @@ export default function LiTem({ url, label }: Props) {
         href={url}
         className={
           pathname === url
-            ? "text-primary-focus"
-            : "hover:-skew-y-2 hover:text-primary-focus"
+            ? "text-secondary-focus"
+            : "hover:scale-105 hover:text-primary-focus"
         }
       >
         {label}
