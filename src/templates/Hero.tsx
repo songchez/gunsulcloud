@@ -1,4 +1,3 @@
-import { Button } from "@/components/button/Button";
 import { Background } from "../components/background/Background";
 import { HeroOneButton } from "../components/hero/HeroOneButton";
 
@@ -19,8 +18,8 @@ const Hero = () => (
       }
       description={`언제나 건설클라우드를 사랑해 주셔서 감사합니다.`}
       button={
-        <a href="http://pf.kakao.com/_xnxkBexj/chat">
-          <Button text="건설업등록신청" />
+        <a className="btn" href="http://pf.kakao.com/_xnxkBexj/chat">
+          건설업등록신청
         </a>
       }
     />
