@@ -8,9 +8,7 @@ const Banner = () => (
       title="잠깐!"
       subtitle="전문가에게 더 상세한 진단을 받아보세요"
       button={
-        <a className="btn" href="http://pf.kakao.com/_xnxkBexj/chat">
-          신청하기
-        </a>
+        <button className="btn btn-neutral">신청하기</button>
       }
     />
     <br></br>
