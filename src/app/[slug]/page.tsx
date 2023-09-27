@@ -22,11 +22,14 @@ export async function generateMetadata({
 
 export default async function Slug({ params: { slug } }: Props) {
   const postPath: string = `content/${slug}/main.mdx`;
+  const meta = await getPageMetadata(slug);
   const { serialized } = await getPost(postPath);
 
   return (
     <div className="prose dark:prose-dark p-10">
       <div className="js-toc-content">
+        <h1>{meta[0].title}</h1>
+        <p>{meta[0].description}</p>
         <MdxContent source={serialized} />
       </div>
     </div>
